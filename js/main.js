@@ -41,10 +41,7 @@ function mostrarTodos(){
         alert(texto)
 }
 
-mostrarTodos()
-
-function buscarJuguete() {
-    let nombre = prompt('Buscar por nombre: ')
+function buscarJuguete(nombre) {
     // puede ser un juguete o undefined
     const juguete = juguetes.find(
         (j) => {
@@ -62,11 +59,8 @@ function buscarJuguete() {
 
 }
 
-buscarJuguete()
 
-function buscarPorPrecioMenorQue() {
-
-    let valor = parseInt(prompt('Buscar por precio menor que:'));
+function buscarPorPrecioMenorQue(valor) {
 
     let juguetesFiltrados = juguetes.filter(
         (j) => j.precio < valor
@@ -85,10 +79,8 @@ function buscarPorPrecioMenorQue() {
     }
 
 }
-buscarPorPrecioMenorQue()
 
-function buscarJuguetesPorSexo() {
-    let sexo = prompt("Buscar por sexo: \n ");
+function buscarJuguetesPorSexo(sexo) {
     let juguetesFiltradosPorGenero = juguetes.filter(
         (j) => j.publico === sexo
     );
@@ -105,5 +97,3 @@ function buscarJuguetesPorSexo() {
         alert(encontrados)
     }
 }
-
-buscarJuguetesPorSexo()
